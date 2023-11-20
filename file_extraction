@@ -1,0 +1,19 @@
+package extraction;
+import java.io.*;
+import java.io.BufferedReader;
+public class fileExtraction {
+	public static void main(String[] args) throws Exception
+	{
+		FileReader fr=new FileReader("C:\\Users\\bhanu\\Desktop\\SampleTextFile_50kb.txt");
+		BufferedReader br=new BufferedReader(fr);
+		if(br.markSupported()) {     //checks wheteher the file supports the marking and resetting methods
+			String line;
+			do{
+			line=br.readLine();
+			System.out.println(line);
+			}while(line!=null);
+			//System.out.print(br.readLine());
+		
+	}
+	}
+}
